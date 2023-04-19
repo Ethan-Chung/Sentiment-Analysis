@@ -8,11 +8,13 @@ To turn on the server, you need to first start up a python virtual environment.
 
 On windows cmd:
 
-1. `cd flask-server`
+1. `python -m venv venv` (if this is your first time)
 2. `.\venv\Scripts\activate`
-3.  `python server.py`
+4. `pip install requirements.txt` (if its your first time running it)
+3. `cd flask-server`
+5. `python server.py`
 
-A webpage should pop up with some JSON but you can just close that. This is what we will send to the client.
+A webpage may pop up with some JSON but you can just close that. This is what we will send to the client.
 
 ## Step 2: Turn on the client 
 
@@ -23,6 +25,17 @@ The client is what gets information from the server code and shows it out to the
 On windows cmd: 
 
 1. From the main directory `cd client`
-2. `npm start`
+2. `npm install` (if its your first time running it)
+3. `npm start`
 
 Once you run it, a new webpage will pop up and this is what users will sees
+
+
+# To Run the Jupyter Notebook 
+
+To run the correct data set you will need to download this and put it in the projects folder. The file is too big to send through git so I had to git ignore it
+
+https://www.kaggle.com/datasets/snap/amazon-fine-food-reviews?resource=download
+
+After that make sure the virtual environment is selected on the kernel.
+
