@@ -7,6 +7,7 @@ import './App.css';
 
 export default function App() {
   const [data, setData] = useState([]);
+  const [input, setInput] = useState([]);
   const [userInput, setUserInput] = useState(''),
     onInput = ({target:{value}}) => setUserInput(value),
     onFormSubmit = e => {
@@ -21,7 +22,7 @@ export default function App() {
           console.log(data);
         }
       );
-
+      setInput(userInput);
       setUserInput('');
     }
 
@@ -37,10 +38,11 @@ export default function App() {
               <div/>
              ) : (
               <div className='text-center pt-2'>
-                <p>Positive: {data.pos} </p>
-                <p>Negative: {data.neg} </p>
-                <p>Neutral: {data.neu} </p>
-                <p>Compound: {data.compound} </p>
+                
+                <p><b>Positive:</b> {data.pos} </p>
+                <p><b>Negative:</b> {data.neg} </p>
+                <p><b>Neutral:</b> {data.neu} </p>
+                <p><b>Compound:</b> {data.compound} </p>
               </div>
              )
         }
@@ -58,6 +60,10 @@ export default function App() {
         </Button>
         
       </div>
+      <div className='text-center pt-2'>
+        <p><b>Phrase:</b> {input} </p>
+      </div>
+      
     </div>
   );
 }
